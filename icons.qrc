@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>images/globos.jpg</file>
+        <file>images/Map_of_Central_Asia.png</file>
+    </qresource>
+</RCC>

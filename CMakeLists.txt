@@ -40,7 +40,7 @@ set(fuentes_SRCS src/main.cpp)
 add_subdirectory(src)
 
 # aquí se puede poner:
-add_executable(${PROJECT_NAME} ${fuentes_SRCS})
+add_executable(${PROJECT_NAME} ${fuentes_SRCS} icons.qrc)
 
 # no sé por qué esto hay que ponerlo tras el add_executable??
 # target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)

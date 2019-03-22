@@ -88,7 +88,7 @@ void General::cerrar()
 void General::mostrarImagen(bool resultado)
 {
 
-    QPixmap acierto(":images/images/Map_of_Central_Asia.png");
+    QPixmap acierto(":images/images/globos.jpg");
 
     if (resultado)  {
         qDebug() << "estamos en acierto...";

@@ -15,6 +15,10 @@ public:
     explicit General(QWidget *parent = nullptr);
     ~General();
 
+private slots:
+    void limpiar();
+    void comprobar();
+    
 private:
     Ui::General *ui;
 };

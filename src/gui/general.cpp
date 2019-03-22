@@ -12,3 +12,15 @@ General::~General()
 {
     delete ui;
 }
+
+void General::limpiar()
+{
+
+
+}
+
+void General::comprobar()
+{
+
+}
+

@@ -3,8 +3,6 @@
 
 #include <QWidget>
 
-class QPixmap; 
-
 namespace Ui {
 class General;
 }
@@ -27,9 +25,6 @@ private slots:
     
 private:
     Ui::General *ui;
-
-    //QPixmap *acierto;
-    QPixmap *fallo;
 
     void mostrarImagen(bool resultado);
 };

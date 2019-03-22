@@ -23,8 +23,6 @@ General::General(QWidget *parent) :
     connect(ui->btLimpiar, &QPushButton::clicked, this, &General::limpiar);
     connect(ui->btComprobar, &QPushButton::clicked, this, &General::comprobar);
 
-    fallo = new QPixmap();
-    
     // ponemos el foco en el primer campo.
     ui->txtDigito1->setFocus();
 }
@@ -92,7 +90,6 @@ void General::mostrarImagen(bool resultado)
 
     if (resultado)  {
         qDebug() << "estamos en acierto...";
-        //ui->picImagen->setPixmap(acierto.scaled(w, h));
         ui->picImagen->setPixmap(acierto);
         ui->picImagen->setScaledContents(true);
         ui->picImagen->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);

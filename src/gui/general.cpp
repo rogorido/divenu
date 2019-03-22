@@ -1,6 +1,9 @@
 #include "general.h"
 #include "ui_general.h"
 
+#include <QPixmap>
+#include <QDebug>
+
 const int control = 628123;
 
 General::General(QWidget *parent) :
@@ -9,15 +12,18 @@ General::General(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
     // sólo se permiten dígitos.
     QList<QLineEdit*> lista = this->findChildren<QLineEdit*>();
     foreach(QLineEdit *l, lista) {
         l->setInputMask("9");
     }
 
+    // hacemos las conexiones 
     connect(ui->btSalir, &QPushButton::clicked, this, &General::cerrar);
     connect(ui->btLimpiar, &QPushButton::clicked, this, &General::limpiar);
+    connect(ui->btComprobar, &QPushButton::clicked, this, &General::comprobar);
+
+    fallo = new QPixmap();
     
     // ponemos el foco en el primer campo.
     ui->txtDigito1->setFocus();
@@ -36,6 +42,8 @@ void General::limpiar()
     foreach(QLineEdit *l, lista) {
         l->clear();
     }
+
+    ui->picImagen->clear();
 
     // ponemos el foco en el primer campo.
     ui->txtDigito1->setFocus();
@@ -80,5 +88,14 @@ void General::cerrar()
 void General::mostrarImagen(bool resultado)
 {
 
+    QPixmap acierto(":images/images/Map_of_Central_Asia.png");
+
+    if (resultado)  {
+        qDebug() << "estamos en acierto...";
+        //ui->picImagen->setPixmap(acierto.scaled(w, h));
+        ui->picImagen->setPixmap(acierto);
+        ui->picImagen->setScaledContents(true);
+        ui->picImagen->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
+    }
 
 }

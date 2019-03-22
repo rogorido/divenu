@@ -42,6 +42,17 @@ void General::limpiar()
 void General::comprobar()
 {
     int introducido;
+    QString datosmetidos;
+
+    datosmetidos = QString("%1%2%3%4%5%6")
+        .arg(ui->txtDigito1->text())
+        .arg(ui->txtDigito2->text())
+        .arg(ui->txtDigito3->text())
+        .arg(ui->txtDigito4->text())
+        .arg(ui->txtDigito5->text())
+        .arg(ui->txtDigito6->text());
+
+    introducido = datosmetidos.toInt();
 
     if ( introducido == control )
         mostrarImagen(true);

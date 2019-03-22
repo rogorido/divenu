@@ -15,6 +15,8 @@ General::General(QWidget *parent) :
     foreach(QLineEdit *l, lista) {
         l->setInputMask("9");
     }
+
+    connect(ui->btSalir, &QPushButton::clicked, this, &General::cerrar);
     
     // ponemos el foco en el primer campo.
     ui->txtDigito1->setFocus();
@@ -70,6 +72,7 @@ void General::anadirNuevoCodigo()
 void General::cerrar()
 {
 
+    this->close();
 
 }
 

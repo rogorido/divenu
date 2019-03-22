@@ -18,6 +18,10 @@ public:
 private slots:
     void limpiar();
     void comprobar();
+
+    void anadirNuevoCodigo();
+
+    void cerrar();
     
 private:
     Ui::General *ui;

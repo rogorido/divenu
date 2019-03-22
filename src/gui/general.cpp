@@ -16,7 +16,6 @@ General::~General()
 void General::limpiar()
 {
 
-
 }
 
 void General::comprobar()
@@ -24,3 +23,14 @@ void General::comprobar()
 
 }
 
+void General::anadirNuevoCodigo()
+{
+
+    
+}
+
+void General::cerrar()
+{
+
+
+}

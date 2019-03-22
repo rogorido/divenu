@@ -53,6 +53,13 @@ void General::comprobar()
     int introducido;
     QString datosmetidos;
 
+    // si alguno está vacío no vale, salimos 
+    QList<QLineEdit*> lista = this->findChildren<QLineEdit*>();
+    foreach(QLineEdit *l, lista) {
+        if ( l->text().isEmpty() )
+            return;
+    }
+
     datosmetidos = QString("%1%2%3%4%5%6")
         .arg(ui->txtDigito1->text())
         .arg(ui->txtDigito2->text())

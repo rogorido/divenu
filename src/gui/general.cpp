@@ -6,6 +6,16 @@ General::General(QWidget *parent) :
     ui(new Ui::General)
 {
     ui->setupUi(this);
+
+
+    // sólo se permiten dígitos.
+    QList<QLineEdit*> lista = this->findChildren<QLineEdit*>();
+    foreach(QLineEdit *l, lista) {
+        l->setInputMask("9");
+    }
+    
+    // ponemos el foco en el primer campo.
+    ui->txtDigito1->setFocus();
 }
 
 General::~General()
@@ -15,6 +25,9 @@ General::~General()
 
 void General::limpiar()
 {
+
+    // ponemos el foco en el primer campo.
+    ui->txtDigito1->setFocus();
 
 }
 

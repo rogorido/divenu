@@ -17,6 +17,7 @@ General::General(QWidget *parent) :
     }
 
     connect(ui->btSalir, &QPushButton::clicked, this, &General::cerrar);
+    connect(ui->btLimpiar, &QPushButton::clicked, this, &General::limpiar);
     
     // ponemos el foco en el primer campo.
     ui->txtDigito1->setFocus();

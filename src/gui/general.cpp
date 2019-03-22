@@ -87,12 +87,14 @@ void General::mostrarImagen(bool resultado)
 {
 
     QPixmap acierto(":images/images/globos.jpg");
+    QPixmap fallo(":images/images/tristeza.jpg");
 
-    if (resultado)  {
-        qDebug() << "estamos en acierto...";
+    if (resultado)
         ui->picImagen->setPixmap(acierto);
-        ui->picImagen->setScaledContents(true);
-        ui->picImagen->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
-    }
+    else
+        ui->picImagen->setPixmap(fallo);
+    
+    ui->picImagen->setScaledContents(true);
+    ui->picImagen->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
 
 }

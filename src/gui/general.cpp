@@ -26,6 +26,12 @@ General::~General()
 void General::limpiar()
 {
 
+    // borramos todos los campos 
+    QList<QLineEdit*> lista = this->findChildren<QLineEdit*>();
+    foreach(QLineEdit *l, lista) {
+        l->clear();
+    }
+
     // ponemos el foco en el primer campo.
     ui->txtDigito1->setFocus();
 

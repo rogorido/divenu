@@ -25,6 +25,8 @@ private slots:
     
 private:
     Ui::General *ui;
+
+    void mostrarImagen(bool resultado);
 };
 
 #endif // GENERAL_H

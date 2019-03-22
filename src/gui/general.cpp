@@ -1,6 +1,8 @@
 #include "general.h"
 #include "ui_general.h"
 
+const int control = 628123;
+
 General::General(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::General)
@@ -39,6 +41,12 @@ void General::limpiar()
 
 void General::comprobar()
 {
+    int introducido;
+
+    if ( introducido == control )
+        mostrarImagen(true);
+    else
+        mostrarImagen(false);
 
 }
 
@@ -49,6 +57,12 @@ void General::anadirNuevoCodigo()
 }
 
 void General::cerrar()
+{
+
+
+}
+
+void General::mostrarImagen(bool resultado)
 {
 
 

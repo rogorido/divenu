@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>General</string>
+   <string>Divenu!</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme=":images/images/map.png"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>

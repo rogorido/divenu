@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=/home/david/git/divenu/build/divenu
+Icon=/home/david/git/divenu/images/map.png
+Type=Application
+Terminal=false
+Comment=Juego para clase de español 
+Name=Divenu
+GenericName=Divenu
+StartupNotify=true
+Categories=Games

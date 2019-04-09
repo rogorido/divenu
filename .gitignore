@@ -9,3 +9,5 @@ compile_commands.json
 CTestTestfile.cmake
 CMakeLists.txt.user
 build/
+debug/
+.ccls-cache/

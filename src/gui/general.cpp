@@ -70,10 +70,7 @@ void General::comprobar()
 
     introducido = datosmetidos.toInt();
 
-    if ( introducido == control )
-        mostrarImagen(true);
-    else
-        mostrarImagen(false);
+    ( introducido == control ) ? mostrarImagen(true) : mostrarImagen(false);
 
 }
 
@@ -96,10 +93,7 @@ void General::mostrarImagen(bool resultado)
     QPixmap acierto(":images/images/globos.jpg");
     QPixmap fallo(":images/images/tristeza.jpg");
 
-    if (resultado)
-        ui->picImagen->setPixmap(acierto);
-    else
-        ui->picImagen->setPixmap(fallo);
+    resultado ? ui->picImagen->setPixmap(acierto) : ui->picImagen->setPixmap(fallo);
     
     ui->picImagen->setScaledContents(true);
     ui->picImagen->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
